@@ -142,9 +142,11 @@ export function ContactSection() {
                 <div>
                   <div className="font-medium">Office</div>
                   <p className="text-muted-foreground">
-                    Plot No. 123, Financial District
+                    Savvys Tulip Cheruku Plaza, 4th Floor
                     <br />
-                    Hyderabad, Telangana 500032
+                    New Samathapuri Colony, Nagole Junction
+                    <br />
+                    Kothapet, Hyderabad, TS 500035
                   </p>
                 </div>
               </div>
@@ -170,7 +172,7 @@ export function ContactSection() {
             {/* Map */}
             <div className="rounded-lg overflow-hidden border border-border h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6326458676!2d78.38896!3d17.424916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5d69df%3A0x19688beb557fa0ee!2sFinancial%20District%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.9325!2d78.5145!3d17.3975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8f7d8f7d8f7d%3A0x3bcb8f7d8f7d8f7d!2sKothapet%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
