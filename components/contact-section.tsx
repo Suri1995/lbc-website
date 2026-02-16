@@ -44,7 +44,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative py-10 md:py-20 bg-secondary/30">
+    <section id="contact" className="mx-auto w-full max-w-[1280px] items-center justify-between py-7 md:py-20 px-[14px] md:px-0">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-[-180px] h-[360px] w-[360px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute right-[-180px] bottom-[-180px] h-[360px] w-[360px] rounded-full bg-accent/10 blur-3xl" />
