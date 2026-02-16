@@ -3,10 +3,9 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-secondary/20">
-      <div className="container py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Brand */}
+    <footer className="relative overflow-hidden">
+      <div className="container mx-auto w-full max-w-[1280px] items-center justify-between py-7 md:py-10 px-[14px] md:px-[64px]">
+        <div className="grid gap-10 md:grid-cols-4">
           <div className="space-y-4">
             <div className="text-xl font-bold">
               LBC <span className="text-accent">Real Estate</span>
@@ -14,36 +13,40 @@ export function Footer() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               Building Trust. Creating Value. Shaping Tomorrow.
             </p>
-            <div className="flex gap-4">
+
+            <div className="flex flex-wrap gap-3">
               <Link
                 href="#"
-                className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                aria-label="Facebook"
+                className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
                 <Facebook className="h-4 w-4 text-primary" />
               </Link>
               <Link
                 href="#"
-                className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                aria-label="Instagram"
+                className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
                 <Instagram className="h-4 w-4 text-primary" />
               </Link>
               <Link
                 href="#"
-                className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                aria-label="LinkedIn"
+                className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
                 <Linkedin className="h-4 w-4 text-primary" />
               </Link>
               <Link
                 href="#"
-                className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                aria-label="Twitter"
+                className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
               >
                 <Twitter className="h-4 w-4 text-primary" />
               </Link>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
+          <div className="text-center space-y-4">
             <h3 className="font-semibold">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -69,8 +72,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
-          <div className="space-y-4">
+          <div className="text-center space-y-4">
             <h3 className="font-semibold">Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -96,8 +98,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
-          <div className="space-y-4">
+          <div className="text-center space-y-4">
             <h3 className="font-semibold">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -119,10 +120,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">© 2026 LBC Groups. All rights reserved.</p>
-            <p className="text-xs text-muted-foreground text-center">
+        <div className="mt-10 md:mt-12 pt-6 md:pt-8 border-t border-border">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <p className="text-sm text-muted-foreground text-center md:text-left">
+              © 2026 LBC Groups. All rights reserved.
+            </p>
+            <p className="text-xs text-muted-foreground text-center md:text-right max-w-[760px] leading-relaxed">
               Disclaimer: All representations and information are subject to change. Please verify details before making
               investment decisions.
             </p>

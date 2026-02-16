@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -6,42 +8,30 @@ import { MapPin, Maximize2 } from "lucide-react"
 const projects = [
   {
     id: 1,
-    name: "LBC Green Valley",
-    location: "Shamshabad, Hyderabad",
+    slug: "hill-county",
+    defaultType: "open-plots",
+    name: "Hill County",
+    location: "Near Kondapochamma Temple",
     image: "/luxury-gated-community-with-green-spaces-and-moder.jpg",
-    plotSize: "150-300 Sq. Yards",
+    plotSize: "121 Sq. Yards per plot",
     type: "Residential Plots",
   },
   {
     id: 2,
-    name: "LBC Premium Enclave",
-    location: "Warangal Highway",
+    slug: "yehvi-farm-lands-phase-2",
+    defaultType: "farm-plots",
+    name: "Yehvi Farm Lands – Phase II",
+    location: "Near Kolanpaka Jain temple",
     image: "/premium-residential-plots-with-wide-roads-and-stre.jpg",
     plotSize: "200-500 Sq. Yards",
     type: "Gated Community",
-  },
-  {
-    id: 3,
-    name: "LBC Smart City Plots",
-    location: "Vijayawada",
-    image: "/modern-smart-city-development-with-contemporary-vi.jpg",
-    plotSize: "100-250 Sq. Yards",
-    type: "Smart City Plots",
-  },
-  {
-    id: 4,
-    name: "LBC Lake View Estates",
-    location: "Khammam District",
-    image: "/lakeside-residential-plots-with-scenic-views-and-n.jpg",
-    plotSize: "300-600 Sq. Yards",
-    type: "Premium Villas",
   },
 ]
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 md:py-32">
-      <div className="container">
+    <section id="projects" className="mx-auto w-full max-w-[1280px] items-center justify-between py-7 md:py-20 px-[14px] md:px-0">
+      <div className="container md:px-[64px]">
         <div className="text-center space-y-4 mb-12">
           <div className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">
             Our Projects
@@ -69,7 +59,8 @@ export function ProjectsSection() {
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="p-6 space-y-2">
+
+              <CardContent className="px-6 space-y-2">
                 <CardTitle className="text-2xl font-bold">{project.name}</CardTitle>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <MapPin className="h-4 w-4" />
@@ -80,9 +71,10 @@ export function ProjectsSection() {
                   <span className="text-sm font-medium">{project.plotSize}</span>
                 </div>
               </CardContent>
+
               <CardFooter className="p-6 pt-0">
                 <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href={`/projects/${project.id}`}>View Details</Link>
+                  <Link href={`/${project.defaultType}/${project.slug}`}>View Plots</Link>
                 </Button>
               </CardFooter>
             </Card>

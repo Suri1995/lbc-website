@@ -24,7 +24,7 @@ const stats = [
 
 export function InvestorsSection() {
   return (
-    <section id="investors" className="py-20 md:py-32">
+    <section id="investors" className="mx-auto w-full max-w-[1280px] py-8 md:py-20 px-[14px] md:px-[64px]">
       <div className="container">
         <div className="text-center space-y-4 mb-12">
           <div className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium">

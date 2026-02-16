@@ -11,17 +11,25 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
+    <>
+    <Header />
     <main className="min-h-screen">
-      <Header />
       <HeroSection />
+      <div className="bg-[radial-gradient(circle_at_center,#f5f1e6_0%,#e6d9b8_30%,#d2c18f_55%,#b8a66c_80%,#8f804f_100%)]">
       <AboutSection />
+      </div>
+      <div className="bg-gray-200">
       <ProjectsSection />
+      </div>
       <WhyLBCSection />
       <InvestorsSection />
-      <TestimonialsSection />
+      <div className="bg-[#faf0e6]"><TestimonialsSection /></div>
       <CTASection />
       <ContactSection />
-      <Footer />
     </main>
+    <div className="bg-gray-200">
+      <Footer />
+      </div>
+    </>
   )
 }

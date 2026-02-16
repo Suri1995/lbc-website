@@ -5,57 +5,24 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Home, TrendingUp, CheckCircle2, Phone, Mail, TreePine } from "lucide-react"
 import Link from "next/link"
 
-const farmPlots = [
+const farmProjects = [
   {
     id: 1,
-    name: "LBC Weekend Farms",
-    location: "Shamirpet, Hyderabad",
+    slug: "yehvi-farm-lands-phase-2",
+    name: "Yehvi Farm Lands – Phase II",
+    locationLabel: "Warangal Highway",
     image: "/luxury-farmhouse-with-landscaping-and-pond.jpg",
-    plotSize: "1000-3000 Sq. Yards",
-    price: "₹8,500/Sq. Yard",
-    distance: "45 minutes from Hyderabad",
-    features: [
-      "Farmhouse Construction Allowed",
-      "Electricity & Water",
-      "Gated Community",
-      "24/7 Security",
-      "Club House & Pool",
-      "Organic Farming Support",
-    ],
+    highlight: "Premium weekend farm plots with modern amenities near Hyderabad.",
+    tags: ["Farmhouse Allowed", "Gated Community", "High Appreciation"],
   },
   {
     id: 2,
-    name: "LBC Nature Retreat",
-    location: "Bibinagar, Near Hyderabad",
-    image: "/farmland-retreat-with-trees-and-natural-landscape.jpg",
-    plotSize: "2000-5000 Sq. Yards",
-    price: "₹6,800/Sq. Yard",
-    distance: "35 minutes from Hyderabad",
-    features: [
-      "HMDA Layout Approved",
-      "Underground Power Lines",
-      "Drip Irrigation Setup",
-      "Compound Wall",
-      "Children's Play Area",
-      "Guest House Facility",
-    ],
-  },
-  {
-    id: 3,
-    name: "LBC Eco Farms",
-    location: "Srisailam Highway",
+    slug: "hill-county",
+    name: "Hill County",
+    locationLabel: "Near Kondapochamma Temple",
     image: "/eco-friendly-farm-with-solar-panels-and-greenery.jpg",
-    plotSize: "1500-4000 Sq. Yards",
-    price: "₹7,200/Sq. Yard",
-    distance: "50 minutes from Hyderabad",
-    features: [
-      "Solar Panel Ready",
-      "Rainwater Harvesting",
-      "Fruit Trees Plantation",
-      "Wide Internal Roads",
-      "Meditation Center",
-      "Organic Farming Training",
-    ],
+    highlight: "Eco-farm plots designed for nature living, organic farming, and long-term investment growth.",
+    tags: ["Organic Farming", "Eco Living", "Wide Roads"],
   },
 ]
 
@@ -64,7 +31,6 @@ export default function FarmPlotsPage() {
     <main className="min-h-screen">
       <Header />
 
-      {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground py-20 md:py-32">
         <div className="container">
           <div className="max-w-3xl">
@@ -80,7 +46,7 @@ export default function FarmPlotsPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Link href="#plots">Explore Farm Plots</Link>
+                <Link href="#projects">Explore Farm Plot Projects</Link>
               </Button>
               <Button
                 asChild
@@ -95,7 +61,6 @@ export default function FarmPlotsPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
       <section className="py-20 bg-muted/30">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
@@ -145,119 +110,51 @@ export default function FarmPlotsPage() {
         </div>
       </section>
 
-      {/* Available Plots Section */}
-      <section id="plots" className="py-20">
+      <section id="projects" className="py-20">
         <div className="container">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-balance">Available Farm Plot Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-balance">Farm Plot Projects</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Premium farm plot communities near Hyderabad with world-class amenities
+              Select a project to view available farm plots inside it
             </p>
           </div>
 
-          <div className="grid gap-8">
-            {farmPlots.map((plot) => (
-              <Card key={plot.id} className="overflow-hidden">
-                <div className="grid md:grid-cols-2 gap-0">
-                  <div className="relative h-64 md:h-auto">
-                    <img
-                      src={plot.image || "/placeholder.svg"}
-                      alt={plot.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-6 md:p-8 space-y-6">
-                    <div>
-                      <h3 className="text-2xl md:text-3xl font-bold mb-2">{plot.name}</h3>
-                      <div className="flex items-center gap-2 text-muted-foreground mb-2">
-                        <MapPin className="h-4 w-4" />
-                        <span>{plot.location}</span>
-                      </div>
-                      <div className="text-sm text-primary font-medium">{plot.distance}</div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <div className="text-sm text-muted-foreground mb-1">Plot Size</div>
-                        <div className="font-semibold">{plot.plotSize}</div>
-                      </div>
-                      <div>
-                        <div className="text-sm text-muted-foreground mb-1">Price</div>
-                        <div className="font-semibold text-accent">{plot.price}</div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <div className="text-sm font-medium mb-3">Premium Amenities</div>
-                      <div className="grid grid-cols-1 gap-2">
-                        {plot.features.map((feature, index) => (
-                          <div key={index} className="flex items-center gap-2">
-                            <CheckCircle2 className="h-4 w-4 text-accent" />
-                            <span className="text-sm">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                      Schedule Visit
-                    </Button>
-                  </CardContent>
+          <div className="grid md:grid-cols-2 gap-8">
+            {farmProjects.map((p) => (
+              <Card key={p.id} className="overflow-hidden">
+                <div className="relative h-56">
+                  <img src={p.image || "/placeholder.svg"} alt={p.name} className="w-full h-full object-cover" />
                 </div>
+
+                <CardContent className="p-6 space-y-4">
+                  <div>
+                    <h3 className="text-2xl font-bold">{p.name}</h3>
+                    <div className="flex items-center gap-2 text-muted-foreground mt-2">
+                      <MapPin className="h-4 w-4" />
+                      <span className="text-sm">{p.locationLabel}</span>
+                    </div>
+                  </div>
+
+                  <p className="text-muted-foreground">{p.highlight}</p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <span key={t} className="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Link href={`/farm-plots/${p.slug}`}>View Plots</Link>
+                  </Button>
+                </CardContent>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Lifestyle Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-balance">The Farm Plot Lifestyle</h2>
-              <p className="text-lg text-muted-foreground">More than just land - it's a lifestyle upgrade</p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-lg mb-2">Weekend Retreats</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Escape to your private farmhouse every weekend. Enjoy quality time with family away from city life.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-lg mb-2">Organic Farming</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Grow your own organic vegetables and fruits. Live a healthier, self-sustainable lifestyle.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-lg mb-2">Investment Growth</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Farm plots near metro cities show consistent 25-40% annual appreciation as cities expand.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-lg mb-2">Retirement Planning</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Build your retirement home in nature. Perfect for peaceful golden years close to the city.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA Section */}
       <section id="contact" className="py-20 bg-primary text-primary-foreground">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-8">
