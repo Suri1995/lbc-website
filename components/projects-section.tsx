@@ -74,7 +74,7 @@ export function ProjectsSection() {
 
               <CardFooter className="p-6 pt-0">
                 <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href={`/${project.defaultType}/${project.slug}`}>View Plots</Link>
+                  <Link href={"\#contact"}>View Plots</Link>
                 </Button>
               </CardFooter>
             </Card>

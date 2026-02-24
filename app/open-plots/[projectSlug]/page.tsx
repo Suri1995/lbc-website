@@ -3,7 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, CheckCircle2, Phone, Mail } from "lucide-react"
+import { MapPin, Home, TrendingUp, CheckCircle2, Phone, Mail, TreePine, Droplets, Sprout } from "lucide-react"
 
 const openPlots = [
   {
@@ -63,7 +63,7 @@ export default async function OpenPlotsProjectPage({
     <main className="min-h-screen">
       <Header />
 
-      <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground py-20 md:py-32">
+      {/* <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground py-20 md:py-32">
         <div className="container">
           <div className="max-w-3xl">
             <div className="inline-block px-4 py-1 bg-accent rounded-full text-sm font-medium mb-6 text-accent-foreground">
@@ -95,6 +95,61 @@ export default async function OpenPlotsProjectPage({
                 <Link href="#contact">Schedule Site Visit</Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-balance">
+              Why Invest in Agricultural Land?
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Secure your future with sustainable agricultural investments
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <div className="h-12 w-12 rounded-full bg-accent/10 flex items-center justify-center">
+                  <TrendingUp className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold">Steady Returns</h3>
+                <p className="text-muted-foreground">
+                  Agricultural land provides consistent returns through crop yields and long-term appreciation in land
+                  value.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <div className="h-12 w-12 rounded-full bg-accent/10 flex items-center justify-center">
+                  <Droplets className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold">Water Resources</h3>
+                <p className="text-muted-foreground">
+                  All our agricultural plots come with reliable water sources including borewells, canals, or river
+                  proximity.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <div className="h-12 w-12 rounded-full bg-accent/10 flex items-center justify-center">
+                  <Sprout className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold">Fertile Soil</h3>
+                <p className="text-muted-foreground">
+                  Premium quality soil suitable for multiple crops, organic farming, and sustainable agricultural
+                  practices.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

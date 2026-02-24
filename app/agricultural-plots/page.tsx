@@ -59,7 +59,7 @@ export default function AgriculturalPlotsPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground py-20 md:py-32">
+      {/* <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground py-20 md:py-32">
         <div className="container">
           <div className="max-w-3xl">
             <div className="inline-block px-4 py-1 bg-accent rounded-full text-sm font-medium mb-6 text-accent-foreground">
@@ -87,7 +87,7 @@ export default function AgriculturalPlotsPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits Section */}
       <section className="py-20 bg-muted/30">
